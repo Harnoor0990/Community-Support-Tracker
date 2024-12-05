@@ -3,6 +3,16 @@ const donationForm = document.getElementById("donation-form");
 const donationErrorMessages = document.getElementById("donation-error-messages");
 const donationTable = document.getElementById("donation-table").getElementsByTagName("tbody")[0];
 
+// DOM elements for Volunteer Tracker
+const volunteerForm = document.getElementById("volunteer-form");
+const volunteerErrorMessages = document.getElementById("volunteer-error-messages");
+const volunteerTable = document.getElementById("volunteer-table").getElementsByTagName("tbody")[0];
+
+// DOM elements for Event Signup
+const eventForm = document.getElementById("event-form");
+const eventErrorMessages = document.getElementById("event-error-messages");
+const eventTable = document.getElementById("event-table").getElementsByTagName("tbody")[0];
+
 // Generic function to handle form submissions
 function handleFormSubmission(form, tableBody, errorMessages, dataKey, validationFn) {
     return function (event) {
@@ -51,11 +61,29 @@ function handleFormSubmission(form, tableBody, errorMessages, dataKey, validatio
     if (!data['donation-date']) errors.push("Donation date is required.");
     return errors;
   }
+function validateVolunteer(data) {
+  const errors = [];
+  if (!data['volunteer-name']) errors.push("Volunteer name is required.");
+  if (!data['volunteer-email']) errors.push("Email is required.");
+  if (!data['volunteer-availability']) errors.push("Availability is required.");
+  return errors;
+}
+function validateEvent(data) {
+  const errors = [];
+  if (!data['event-name']) errors.push("Event name is required.");
+  if (!data['event-date']) errors.push("Event date is required.");
+  if (!data['event-location']) errors.push("Event location is required.");
+  return errors;
+}
 
   // Event listeners
 donationForm.addEventListener("submit", handleFormSubmission(donationForm, donationTable, donationErrorMessages, "donations", validateDonation));
+volunteerForm.addEventListener("submit", handleFormSubmission(volunteerForm, volunteerTable, volunteerErrorMessages, "volunteers", validateVolunteer));
+eventForm.addEventListener("submit", handleFormSubmission(eventForm, eventTable, eventErrorMessages, "events", validateEvent));
 
 // Load data on page load
 window.onload = function() {
     loadDataToTable(donationTable, "donations");
+    loadDataToTable(volunteerTable, "volunteers");
+    loadDataToTable(eventTable, "events");
 };
