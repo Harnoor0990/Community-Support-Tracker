@@ -42,6 +42,38 @@
   </section>
 
   <hr>
+   <!-- Volunteer Tracker Form -->
+  <section>
+    <h2>Volunteer Tracker</h2>
+    <form id="volunteer-form">
+      <label for="volunteer-name">Volunteer Name:</label>
+      <input id="volunteer-name" type="text" required><br>
+
+      <label for="volunteer-email">Email:</label>
+      <input id="volunteer-email" type="email" required><br>
+
+      <label for="volunteer-availability">Availability:</label>
+      <input id="volunteer-availability" type="text" required><br>
+
+      <button type="submit">Add Volunteer</button>
+    </form>
+
+    <div id="volunteer-error-messages"></div>
+
+    <h3>Volunteers</h3>
+    <table id="volunteer-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Availability</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <hr>
 
   <script src="script.js"></script>
 </body>
