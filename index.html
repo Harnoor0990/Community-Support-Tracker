@@ -74,6 +74,37 @@
   </section>
 
   <hr>
+  
+  <!-- Event Signup Form -->
+  <section>
+    <h2>Event Signup</h2>
+    <form id="event-form">
+      <label for="event-name">Event Name:</label>
+      <input id="event-name" type="text" required><br>
+
+      <label for="event-date">Event Date:</label>
+      <input id="event-date" type="date" required><br>
+
+      <label for="event-location">Location:</label>
+      <input id="event-location" type="text" required><br>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div id="event-error-messages"></div>
+
+    <h3>Event Signups</h3>
+    <table id="event-table">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
 
   <script src="script.js"></script>
 </body>
