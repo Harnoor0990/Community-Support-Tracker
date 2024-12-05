@@ -1,0 +1,140 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #4CAF50;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.5em;
+  }
+  
+  /* Form Section */
+  section {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  input[type="number"], input[type="text"], input[type="date"], input[type="email"] {
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Error Messages */
+  #error-messages {
+    color: #e74c3c;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  td {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover td {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Designing */
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 20px;
+    }
+  
+    section {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    h2 {
+      font-size: 1.6em;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  
+  hr {
+    width: 80%;
+    margin-top: 50px;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  
